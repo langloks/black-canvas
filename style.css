@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'TrenchSlab-Semibold';
+  src: url('TrenchSlab_Complete/Fonts/WEB/fonts/TrenchSlab-Semibold.woff2') format('woff2'),
+       url('TrenchSlab_Complete/Fonts/WEB/fonts/TrenchSlab-Semibold..woff') format('woff'),
+       url('TrenchSlab_Complete/Fonts/WEB/fonts/TrenchSlab-Semibold..ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'typefesse';
+  src: url('./typefesse-master/Fonts/2-webfonts/Typefesse_Claire-Obscure.woff2') format('woff2'),
+       url('./typefesse-master/Fonts/2-webfonts/Typefesse_Claire-Obscure.woff') format('woff')
+}
+
+:root{
+  --sizing: 10px;
+}
+body {
+	font-family:'typefesse';
+	font-size: 80px;
+	line-height: 1.5;
+background-color: black;
+  cursor: none; 
+
+color: white;
+}
+
+div.cursor {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: var(--sizing);
+  height: var(--sizing);
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s, height 0.25s;
+}
+
+div.cursor.is-down {
+  width: 40px;
+  height: 40px;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.controls {
+  text-align: right;
+ font-size: 30px;
+  font-family: 'TrenchSlab-Semibold';
+  color: aliceblue;
+  user-select: none;
+  position:fixed;
+  bottom: 0;
+  right: 30px;
+  z-index: 1;
+  background-color: black;
+  height: 100px;
+  width: 400px;
+  padding-top: 50px;
+}
+
+
+
+nav{
+    user-select: none;
+    position:fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1;
+}
+
+a{
+  display:inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin:0 10px 0 0;
+  text-decoration: none;
+}
+
+.reset {
+  display:inline-block;
+  position: fixed;
+  user-select: none;
+  top: 10px;
+    right: 40px;
+    z-index: 1;
+  
+  color: aliceblue;
+  text-decoration: none;
+
+
+}
+.description{
+  margin: 30px 35px;
+padding:0;
+  top:0;
+position: fixed;
+  font-size:30px;
+  font-family: 'TrenchSlab-Semibold';
+display:inline-block;
+  user-select: none;
+    z-index: 1;
+  color: aliceblue;
+  text-decoration: none;
+}
+p {
+  color: aliceblue;
+  padding: 80px;
+  top: 10vh;
+  left: 0;
+  user-select: none;
+  position: absolute;
+}
+
+p span {
+  opacity:0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 30%;
+  height: 15px;
+  background: white;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 15px;
+  background: #A4BCFF;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 15px;
+  background: #A4BCFF;
+  cursor: pointer;
+}
